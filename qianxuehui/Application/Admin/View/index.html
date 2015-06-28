@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+
+<html>   
+    <!-- START HEAD -->
+    <head>
+    </head>
+    <!-- END HEAD -->
+    
+    <?php 
+		mysql_query("set character set 'gbk'");   //避免中文乱码字符转换	
+		mysql_query("set character set 'utf8'");   // PHP 文件为 utf-8 格式时使用
+			
+		if(isset($_GET['act']) && $_GET['act']=='change'){
+			$name_01=$_POST['name_01'];		
+			$address_01=$_POST['address_01'];
+			$sql1 = "UPDATE link SET name = '$name_01', address = '$address_01' WHERE number = '1'";
+			mysql_query($sql1,$conn);
+			
+			$name_02=$_POST['name_02'];		
+			$address_02=$_POST['address_02'];
+			$sql2 = "UPDATE link SET name = '$name_02', address = '$address_02' WHERE number = '2'";
+			mysql_query($sql2,$conn);
+			
+			$name_03=$_POST['name_03'];		
+			$address_03=$_POST['address_03'];
+			$sql3 = "UPDATE link SET name = '$name_03', address = '$address_03' WHERE number = '3'";
+			mysql_query($sql3,$conn);
+			
+			$name_04=$_POST['name_04'];		
+			$address_04=$_POST['address_04'];
+			$sql4 = "UPDATE link SET name = '$name_04', address = '$address_04' WHERE number = '4'";
+			mysql_query($sql4,$conn);
+			
+			$name_05=$_POST['name_05'];		
+			$address_05=$_POST['address_05'];
+			$sql5 = "UPDATE link SET name = '$name_05', address = '$address_05' WHERE number = '5'";
+			mysql_query($sql5,$conn);
+			
+			$name_06=$_POST['name_06'];		
+			$address_06=$_POST['address_06'];
+			$sql6 = "UPDATE link SET name = '$name_06', address = '$address_06' WHERE number = '6'";
+			mysql_query($sql6,$conn);
+			
+			$name_07=$_POST['name_07'];		
+			$address_07=$_POST['address_07'];
+			$sql7 = "UPDATE link SET name = '$name_07', address = '$address_07' WHERE number = '7'";
+			mysql_query($sql7,$conn);
+			
+			$name_08=$_POST['name_08'];		
+			$address_08=$_POST['address_08'];
+			$sql8 = "UPDATE link SET name = '$name_08', address = '$address_08' WHERE number = '8'";
+			mysql_query($sql8,$conn);
+			
+			$name_09=$_POST['name_09'];		
+			$address_09=$_POST['address_09'];
+			$sql9 = "UPDATE link SET name = '$name_09', address = '$address_09' WHERE number = '9'";
+			mysql_query($sql9,$conn);
+			
+			$name_10=$_POST['name_10'];		
+			$address_10=$_POST['address_10'];
+			$sql10 = "UPDATE link SET name = '$name_10', address = '$address_10' WHERE number = '10'";
+			mysql_query($sql10,$conn);			
+		}
+	?>
+
+    <!-- START BODY -->
+    <body>
+		<h2>友情链接修改</h2>
+		<a href="index.php">返回</a>
+		<form name="form" method="post" action="?act=change">
+		<table border="1">
+			<tr>
+				<td></td>
+				<td>logo</td>
+				<td>name</td>
+				<td>address</td>
+			</tr>
+			<?php
+				$result = mysql_query("SELECT * FROM link where number = '1'");    //得到查询结果数据集
+				$link = mysql_fetch_row($result);
+			?>
+			<tr>
+				<td>num_01</td>
+				<td><img src="../common/images/friend_link/link_01.png"/></td>
+				<td><input type="text" class="box" name="name_01" value="<?php echo $link[2];?>"/></td>
+				<td><input type="text" class="box" name="address_01" value="<?php echo $link[1];?>"/></td>
+			</tr>
+			<?php
+				$result = mysql_query("SELECT * FROM link where number = '2'");    //得到查询结果数据集
+				$link = mysql_fetch_row($result);
+			?>
+			<tr>
+				<td>num_02</td>
+				<td><img src="../common/images/friend_link/link_02.png"/></td>
+				<td><input type="text" class="box" name="name_02" value="<?php echo $link[2];?>"/></td>
+				<td><input type="text" class="box" name="address_02" value="<?php echo $link[1];?>"/></td>
+			</tr>
+			<?php
+				$result = mysql_query("SELECT * FROM link where number = '3'");    //得到查询结果数据集
+				$link = mysql_fetch_row($result);
+			?>
+			<tr>
+				<td>num_03</td>
+				<td><img src="../common/images/friend_link/link_03.png"/></td>
+				<td><input type="text" class="box" name="name_03" value="<?php echo $link[2];?>"/></td>
+				<td><input type="text" class="box" name="address_03" value="<?php echo $link[1];?>"/></td>
+			</tr>
+			<?php
+				$result = mysql_query("SELECT * FROM link where number = '4'");    //得到查询结果数据集
+				$link = mysql_fetch_row($result);
+			?>
+			<tr>
+				<td>num_04</td>
+				<td><img src="../common/images/friend_link/link_04.png"/></td>
+				<td><input type="text" class="box" name="name_04" value="<?php echo $link[2];?>"/></td>
+				<td><input type="text" class="box" name="address_04" value="<?php echo $link[1];?>"/></td>
+			</tr>
+			<?php
+				$result = mysql_query("SELECT * FROM link where number = '5'");    //得到查询结果数据集
+				$link = mysql_fetch_row($result);
+			?>
+			<tr>
+				<td>num_05</td>
+				<td><img src="../common/images/friend_link/link_05.png"/></td>
+				<td><input type="text" class="box" name="name_05" value="<?php echo $link[2];?>"/></td>
+				<td><input type="text" class="box" name="address_05" value="<?php echo $link[1];?>"/></td>
+			</tr>
+			<?php
+				$result = mysql_query("SELECT * FROM link where number = '6'");    //得到查询结果数据集
+				$link = mysql_fetch_row($result);
+			?>
+			<tr>
+				<td>num_06</td>
+				<td><img src="../common/images/friend_link/link_06.png"/></td>
+				<td><input type="text" class="box" name="name_06" value="<?php echo $link[2];?>"/></td>
+				<td><input type="text" class="box" name="address_06" value="<?php echo $link[1];?>"/></td>
+			</tr>
+			<?php
+				$result = mysql_query("SELECT * FROM link where number = '7'");    //得到查询结果数据集
+				$link = mysql_fetch_row($result);
+			?>
+			<tr>
+				<td>num_07</td>
+				<td><img src="../common/images/friend_link/link_07.png"/></td>
+				<td><input type="text" class="box" name="name_07" value="<?php echo $link[2];?>"/></td>
+				<td><input type="text" class="box" name="address_07" value="<?php echo $link[1];?>"/></td>
+			</tr>
+			<?php
+				$result = mysql_query("SELECT * FROM link where number = '8'");    //得到查询结果数据集
+				$link = mysql_fetch_row($result);
+			?>
+			<tr>
+				<td>num_08</td>
+				<td><img src="../common/images/friend_link/link_08.png"/></td>
+				<td><input type="text" class="box" name="name_08" value="<?php echo $link[2];?>"/></td>
+				<td><input type="text" class="box" name="address_08" value="<?php echo $link[1];?>"/></td>
+			</tr>
+			<?php
+				$result = mysql_query("SELECT * FROM link where number = '9'");    //得到查询结果数据集
+				$link = mysql_fetch_row($result);
+			?>
+			<tr>
+				<td>num_09</td>
+				<td><img src="../common/images/friend_link/link_09.png"/></td>
+				<td><input type="text" class="box" name="name_09" value="<?php echo $link[2];?>"/></td>
+				<td><input type="text" class="box" name="address_09" value="<?php echo $link[1];?>"/></td>
+			</tr>
+			<?php
+				$result = mysql_query("SELECT * FROM link where number = '10'");    //得到查询结果数据集
+				$link = mysql_fetch_row($result);
+			?>
+			<tr>
+				<td>num_10</td>
+				<td><img src="../common/images/friend_link/link_10.png"/></td>
+				<td><input type="text" class="box" name="name_10" value="<?php echo $link[2];?>"/></td>
+				<td><input type="text" class="box" name="address_10" value="<?php echo $link[1];?>"/></td>
+			</tr>
+		</table>
+		<br>
+		<input type="submit" name="change" value="确认修改">
+		</hr>
+		<br><br><br>
+		</form>			
+    </body>
+    <!-- END BODY -->
+</html>
