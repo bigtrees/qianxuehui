@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html>   
+    <!-- START HEAD -->
+    <head>
+        <load href='__PUBLIC__/css/admin.css' />
+    </head>
+    <!-- END HEAD -->
+        
+    <!-- START BODY -->
+    <body>
+        <!--介绍块-->
+        <div id="introduce">   
+
+            <!--介绍文-->
+            <div class="content"> <br>
+                <div class="place"> 介绍文章管理</div>
+                <div class="link"><a href="{:U('article/add')}">增加文章</a></div>    
+                <center>
+                    <div class="titleContent">
+                        <tr>
+                            <td bgcolor="#E0E0E0">序号</td>
+                            <td bgcolor="#E0E0E0">&nbsp;标题</td>
+                        </tr><br>
+                    </div>
+                    <foreach name='list' item='user' >
+                        <div class="articleContent"> 
+                        <tr>
+                            <td bgcolor="#FFFFFF"><a href="{:U('article/edit')}?num={$user.num}">{$user.num}</td>
+                            <td bgcolor="#FFFFFF">&nbsp;{$user.title}</td></a>
+                        </tr><br> 
+                        </div>
+                    </foreach>
+                </center>   
+            </div> 
+            <center>
+                <td colspan="3" bgcolor="#FFFFFF">
+                    <div class="pages">{$page}</div>
+                </td> <br><br>  
+            </center>   
+             
+        </div> 
+        <!--end intro-->        
+    </body>
+    <!-- END BODY -->
+</html>

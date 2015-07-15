@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html>   
+    <!-- START HEAD -->
+    <head>
+		<!--导入文本编辑器-->
+		<link rel="stylesheet" href="__PUBLIC__/editor/themes/default/default.css" />
+		<script charset="utf-8" src="__PUBLIC__/editor/kindeditor-min.js"></script>
+		<script charset="utf-8" src="__PUBLIC__/editor/lang/zh_CN.js"></script>
+		<script>
+			var editor;
+			KindEditor.ready(function(K) {
+				editor = K.create('textarea[name="content"]', {
+					allowFileManager : true
+				});
+			});
+		</script>
+    </head>
+    <!-- END HEAD -->
+    
+    <!-- START BODY -->
+    <body>
+		<!--介绍块-->
+		<div id="introduce">				
+			<!--介绍文-->
+			<div class="content">
+				<div class="cont">
+				<form name="form" method="post" action="{:U('article/checkArticle')}">
+					<br>
+					序号：<input type="text" class="box" name="number" value="文章编号"/><br>
+					标题：<input type="text" class="box" name="title" value="文章标题"/><br>
+					内容：<br>
+					<textarea id="editor_id" name="content" style="width:80%;height:500px;">文章内容</textarea><br>
+					<input type="submit" name="add" value="增加">	
+					<input type="submit" name="back" value="取消增加">		
+				</form>
+				</div>
+			</div>
+		</div> 
+		<!--end intro-->		
+    </body>
+    <!-- END BODY -->
+</html>
