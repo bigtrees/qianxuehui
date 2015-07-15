@@ -1,3 +1,8 @@
+a:link {text-decoration: none;}
+a:visited {text-decoration: none;}
+a:hover {text-decoration: none;}
+a:active {text-decoration: none;}
+
 .pages a,.pages span {
     display:inline-block;
     padding:2px 5px;
@@ -24,3 +29,33 @@
     font-weight:700;
     border-color:#50A8E6;
 }
+
+#introduce{
+    background-color: #eeeeee;
+    margin-top: 0px;
+}
+#introduce .content{
+    background-color:#aaaaaa; 
+    width: 400px; height: 500px; 
+    margin-left:auto; margin-right:auto;margin-top: 0px;
+}
+#introduce .content .place{
+    width: 400px; height: 30px; 
+    text-align:center;
+}
+#introduce .content .link{
+    width: 400px; height: 30px; 
+    text-align:right;
+}
+#introduce .content .titleContent{
+    width: 400px; height: 20px; 
+    margin-left:50px; margin-top: 0px;
+    text-align:left;
+    color:#305050;
+}
+#introduce .content .articleContent{
+    width: 400px; height: 20px; 
+    margin-left:50px; margin-top: 20px;
+    text-align:left;
+}
+#introduce .content a{text-align: right;}
